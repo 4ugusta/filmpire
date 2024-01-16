@@ -29,6 +29,12 @@ module.exports = {
   ],
   rules: {
     'import/no-cycle': 0,
+    'import/no-extraneous-dependencies': ['error', {
+      packageDir: './',
+      devDependencies: false,
+      optionalDependencies: false,
+      peerDependencies: false,
+    }],
     'no-console': 0,
     'react/prop-types': 0,
     'linebreak-style': 0,

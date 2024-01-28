@@ -30,10 +30,10 @@ module.exports = {
   rules: {
     'import/no-cycle': 0,
     'import/no-extraneous-dependencies': ['error', {
-      packageDir: './',
-      devDependencies: false,
+      devDependencies: ['**/*.test.js', '**/*.spec.js', 'src/setupTests.js'], // Add any other patterns if needed
       optionalDependencies: false,
       peerDependencies: false,
+      packageDir: './',
     }],
     'no-console': 0,
     'react/prop-types': 0,
